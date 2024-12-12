@@ -7,4 +7,12 @@ target 'ZynxSwiftUI' do
 
   # Pods for ZynxSwiftUI
 
+# Firebase Pods
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Auth'
+  
+  # Core Firebase dependencies
+  pod 'Firebase/Core'
+
 end

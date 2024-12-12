@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6962EA35E77DDC5C4F07A92E /* Pods_ZynxSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA77E243997D424A9F32B127 /* Pods_ZynxSwiftUI.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		0D42A7669FEDD60CB8A43A8D /* Pods-ZynxSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZynxSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-ZynxSwiftUI/Pods-ZynxSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		6DF22C01371231BE353EE3A0 /* Pods-ZynxSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZynxSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-ZynxSwiftUI/Pods-ZynxSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		DE74BA5C2D0AA57A008E24CC /* ZynxSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZynxSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA77E243997D424A9F32B127 /* Pods_ZynxSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZynxSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,17 +30,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6962EA35E77DDC5C4F07A92E /* Pods_ZynxSwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F56D707430FE74B8752D8ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA77E243997D424A9F32B127 /* Pods_ZynxSwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D75F87FA41A521164606A70A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D42A7669FEDD60CB8A43A8D /* Pods-ZynxSwiftUI.debug.xcconfig */,
+				6DF22C01371231BE353EE3A0 /* Pods-ZynxSwiftUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DE74BA532D0AA57A008E24CC = {
 			isa = PBXGroup;
 			children = (
 				DE74BA5E2D0AA57A008E24CC /* ZynxSwiftUI */,
 				DE74BA5D2D0AA57A008E24CC /* Products */,
+				D75F87FA41A521164606A70A /* Pods */,
+				9F56D707430FE74B8752D8ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,9 +79,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE74BA6A2D0AA57B008E24CC /* Build configuration list for PBXNativeTarget "ZynxSwiftUI" */;
 			buildPhases = (
+				77F6C5E7BBC1EC25882CEF6E /* [CP] Check Pods Manifest.lock */,
 				DE74BA582D0AA57A008E24CC /* Sources */,
 				DE74BA592D0AA57A008E24CC /* Frameworks */,
 				DE74BA5A2D0AA57A008E24CC /* Resources */,
+				B2300DAB2011BA4D156BD6A8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -64,8 +93,6 @@
 				DE74BA5E2D0AA57A008E24CC /* ZynxSwiftUI */,
 			);
 			name = ZynxSwiftUI;
-			packageProductDependencies = (
-			);
 			productName = ZynxSwiftUI;
 			productReference = DE74BA5C2D0AA57A008E24CC /* ZynxSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +140,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		77F6C5E7BBC1EC25882CEF6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZynxSwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2300DAB2011BA4D156BD6A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZynxSwiftUI/Pods-ZynxSwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZynxSwiftUI/Pods-ZynxSwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZynxSwiftUI/Pods-ZynxSwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DE74BA582D0AA57A008E24CC /* Sources */ = {
@@ -246,6 +315,7 @@
 		};
 		DE74BA6B2D0AA57B008E24CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D42A7669FEDD60CB8A43A8D /* Pods-ZynxSwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -253,6 +323,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ZynxSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -274,6 +345,7 @@
 		};
 		DE74BA6C2D0AA57B008E24CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DF22C01371231BE353EE3A0 /* Pods-ZynxSwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -281,6 +353,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ZynxSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
