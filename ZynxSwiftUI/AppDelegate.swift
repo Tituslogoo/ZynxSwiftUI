@@ -17,7 +17,10 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
     ) -> Bool {
+        let currentEnvironment: AppEnvironment = AppEnvironment.current
+
         FirebaseApp.configure()
+        Firestore.firestore().settings = currentEnvironment.configuration.firestoreSettings
         
         return true
     }
